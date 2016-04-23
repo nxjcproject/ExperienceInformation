@@ -1,0 +1,12 @@
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\bin\Debug\ExperienceInformation.Service.dll
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\bin\Debug\ExperienceInformation.Service.pdb
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\bin\Debug\EasyUIJsonParser.dll
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\bin\Debug\ExperienceInformation.Infrastructure.dll
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\bin\Debug\SqlServerDataAdapter.dll
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\bin\Debug\AutoMapper.dll
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\bin\Debug\ExperienceInformation.Infrastructure.pdb
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\bin\Debug\EasyUIJsonParser.pdb
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\bin\Debug\SqlServerDataAdapter.pdb
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\obj\Debug\ExperienceInformation.Service.csprojResolveAssemblyReference.cache
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\obj\Debug\ExperienceInformation.Service.dll
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\obj\Debug\ExperienceInformation.Service.pdb

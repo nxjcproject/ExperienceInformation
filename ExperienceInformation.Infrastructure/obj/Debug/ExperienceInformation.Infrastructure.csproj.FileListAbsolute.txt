@@ -1,0 +1,4 @@
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Infrastructure\bin\Debug\ExperienceInformation.Infrastructure.dll
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Infrastructure\bin\Debug\ExperienceInformation.Infrastructure.pdb
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.dll
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.pdb

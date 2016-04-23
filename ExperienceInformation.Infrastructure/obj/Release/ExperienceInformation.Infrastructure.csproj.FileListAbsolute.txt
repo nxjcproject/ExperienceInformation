@@ -1,0 +1,5 @@
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Infrastructure\bin\Release\ExperienceInformation.Infrastructure.dll
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Infrastructure\bin\Release\ExperienceInformation.Infrastructure.pdb
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Infrastructure\obj\Release\ExperienceInformation.Infrastructure.csprojResolveAssemblyReference.cache
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Infrastructure\obj\Release\ExperienceInformation.Infrastructure.dll
+C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Infrastructure\obj\Release\ExperienceInformation.Infrastructure.pdb

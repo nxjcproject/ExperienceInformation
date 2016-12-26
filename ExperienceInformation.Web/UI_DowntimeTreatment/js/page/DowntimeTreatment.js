@@ -53,6 +53,10 @@ function InitializeDowntimeReasonComboxTree(myData) {
 function LoadDowntimeTreatmentData(myLoadType) {
     var m_ReasonItemId = $('#Combobox_DowntimeReasonF').combotree('getValue');
     if (m_ReasonItemId != "" && m_ReasonItemId != undefined) {
+        var win = $.messager.progress({
+            title: '请稍后',
+            msg: '数据载入中...'
+        });
         $.ajax({
             type: "POST",
             url: "DowntimeTreatment.aspx/GetDowntimeTreatmentInfo",
@@ -60,6 +64,7 @@ function LoadDowntimeTreatmentData(myLoadType) {
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (msg) {
+                $.messager.progress('close');
                 var m_MsgData = jQuery.parseJSON(msg.d);
                 if (myLoadType == 'first') {
                     InitializeDowntimeTreatmentGrid("DowntimeTreatment", m_MsgData);
@@ -67,6 +72,9 @@ function LoadDowntimeTreatmentData(myLoadType) {
                 else if (myLoadType == 'last') {
                     $('#grid_DowntimeTreatment').datagrid('loadData', m_MsgData);
                 }
+            },
+            beforeSend: function (XMLHttpRequest) {
+                win;
             }
         });
     }

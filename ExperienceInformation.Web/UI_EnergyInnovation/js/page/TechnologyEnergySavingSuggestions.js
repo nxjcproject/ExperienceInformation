@@ -17,6 +17,10 @@ function InitializingDefaultData() {
 function LoadEnergySavingSuggestionsData(myLoadType) {
     var m_CreateYear = $('#numberspinner_ProposedYearF').numberspinner('getValue');
     var m_Keyword = $('#TextBox_KeywordF').textbox('getText');
+    var win = $.messager.progress({
+        title: '请稍后',
+        msg: '数据载入中...'
+    });
     $.ajax({
         type: "POST",
         url: "TechnologyEnergySavingSuggestions.aspx/GetEnergySavingSuggestionsInfo",
@@ -24,6 +28,7 @@ function LoadEnergySavingSuggestionsData(myLoadType) {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (msg) {
+            $.messager.progress('close');
             var m_MsgData = jQuery.parseJSON(msg.d);
             if (myLoadType == 'first') {
                 InitializeEnergySavingSuggestionsGrid("EnergySavingSuggestions", m_MsgData);
@@ -31,6 +36,9 @@ function LoadEnergySavingSuggestionsData(myLoadType) {
             else if (myLoadType == 'last') {
                 $('#grid_EnergySavingSuggestions').datagrid('loadData', m_MsgData);
             }
+        },
+        beforeSend: function (XMLHttpRequest) {
+            win;
         }
     });
 }

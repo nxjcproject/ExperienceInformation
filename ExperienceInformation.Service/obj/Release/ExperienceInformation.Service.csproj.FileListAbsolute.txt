@@ -10,3 +10,13 @@ C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceI
 C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\obj\Release\ExperienceInformation.Service.csprojResolveAssemblyReference.cache
 C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\obj\Release\ExperienceInformation.Service.dll
 C:\工作\编程\恒拓软件\三层框架V3.1\ExperienceInformation\ExperienceInformation.Service\obj\Release\ExperienceInformation.Service.pdb
+C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\ExperienceInformation-master\ExperienceInformation.Service\bin\Release\ExperienceInformation.Service.dll
+C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\ExperienceInformation-master\ExperienceInformation.Service\bin\Release\ExperienceInformation.Service.pdb
+C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\ExperienceInformation-master\ExperienceInformation.Service\bin\Release\ExperienceInformation.Infrastructure.dll
+C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\ExperienceInformation-master\ExperienceInformation.Service\bin\Release\AutoMapper.dll
+C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\ExperienceInformation-master\ExperienceInformation.Service\bin\Release\ExperienceInformation.Infrastructure.pdb
+C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\ExperienceInformation-master\ExperienceInformation.Service\bin\Release\EasyUIJsonParser.pdb
+C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\ExperienceInformation-master\ExperienceInformation.Service\bin\Release\SqlServerDataAdapter.pdb
+C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\ExperienceInformation-master\ExperienceInformation.Service\obj\Release\ExperienceInformation.Service.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\ExperienceInformation-master\ExperienceInformation.Service\obj\Release\ExperienceInformation.Service.dll
+C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\ExperienceInformation-master\ExperienceInformation.Service\obj\Release\ExperienceInformation.Service.pdb

@@ -20,6 +20,10 @@ function LoadCaseAnalysisData(myLoadType) {
     var m_Keyword = $('#TextBox_KeywordF').textbox('getText');
     var m_CaseAnalysisType = $('#Combobox_CaseAnalysisTypeF').combobox('getValue');
     var m_CaseAnalysisNature = $("input[name='SelectRadio_CaseAnalysisNatureF']:checked").val();
+    var win = $.messager.progress({
+        title: '请稍后',
+        msg: '数据载入中...'
+    });
     $.ajax({
         type: "POST",
         url: "CaseAnalysis.aspx/GetCaseAnalysisInfo",
@@ -27,6 +31,7 @@ function LoadCaseAnalysisData(myLoadType) {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (msg) {
+            $.messager.progress('close');
             var m_MsgData = jQuery.parseJSON(msg.d);
             if (myLoadType == 'first') {
                 InitializeCaseAnalysisGrid("CaseAnalysis", m_MsgData);
@@ -34,6 +39,9 @@ function LoadCaseAnalysisData(myLoadType) {
             else if (myLoadType == 'last') {
                 $('#grid_CaseAnalysis').datagrid('loadData', m_MsgData);
             }
+        },
+        beforeSend: function (XMLHttpRequest) {
+            win;
         }
     });
 }

@@ -23,6 +23,10 @@ function LoadEnergyProcessRecordData(myLoadType) {
     var m_RecordName = $('#TextBox_RecordNameF').textbox('getText');
     var m_DepartmentName = $('#TextBox_DepartmentNameF').textbox('getText');
     var m_RecordType = "";
+    var win = $.messager.progress({
+        title: '请稍后',
+        msg: '数据载入中...'
+    });
     $.ajax({
         type: "POST",
         url: "EnergyProcessRecord.aspx/GetEnergyProcessRecordInfo",
@@ -30,6 +34,7 @@ function LoadEnergyProcessRecordData(myLoadType) {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (msg) {
+            $.messager.progress('close');
             var m_MsgData = jQuery.parseJSON(msg.d);
             if (myLoadType == 'first') {
                 InitializeEnergyProcessRecordGrid("EnergyProcessRecord", m_MsgData);
@@ -37,6 +42,9 @@ function LoadEnergyProcessRecordData(myLoadType) {
             else if (myLoadType == 'last') {
                 $('#grid_EnergyProcessRecord').datagrid('loadData', m_MsgData);
             }
+        },
+        beforeSend: function (XMLHttpRequest) {
+            win;
         }
     });
 }

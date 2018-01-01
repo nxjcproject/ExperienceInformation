@@ -7,3 +7,8 @@ C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\Expe
 C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\ExperienceInformation-master\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\ExperienceInformation-master\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.dll
 C:\Users\Administrator\Desktop\第一轮修改\ExperienceInformation-master\ExperienceInformation-master\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.pdb
+C:\Users\Administrator\Desktop\NXJC统一调整列宽\ExperienceInformation-master\ExperienceInformation.Infrastructure\bin\Debug\ExperienceInformation.Infrastructure.dll
+C:\Users\Administrator\Desktop\NXJC统一调整列宽\ExperienceInformation-master\ExperienceInformation.Infrastructure\bin\Debug\ExperienceInformation.Infrastructure.pdb
+C:\Users\Administrator\Desktop\NXJC统一调整列宽\ExperienceInformation-master\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\NXJC统一调整列宽\ExperienceInformation-master\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.dll
+C:\Users\Administrator\Desktop\NXJC统一调整列宽\ExperienceInformation-master\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.pdb

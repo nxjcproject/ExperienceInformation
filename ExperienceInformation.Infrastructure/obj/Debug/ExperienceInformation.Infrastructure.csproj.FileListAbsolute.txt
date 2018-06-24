@@ -12,3 +12,8 @@ C:\Users\Administrator\Desktop\NXJC统一调整列宽\ExperienceInformation-mast
 C:\Users\Administrator\Desktop\NXJC统一调整列宽\ExperienceInformation-master\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\NXJC统一调整列宽\ExperienceInformation-master\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.dll
 C:\Users\Administrator\Desktop\NXJC统一调整列宽\ExperienceInformation-master\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.pdb
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Infrastructure\bin\Debug\ExperienceInformation.Infrastructure.dll
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Infrastructure\bin\Debug\ExperienceInformation.Infrastructure.pdb
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.dll
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Infrastructure\obj\Debug\ExperienceInformation.Infrastructure.pdb

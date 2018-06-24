@@ -26,13 +26,13 @@ namespace ExperienceInformation.Web.UI_DowntimeTreatment
         public static string GetDowntimeReasonInfo()
         {
             DataTable m_DowntimeTreatmentInfo = ExperienceInformation.Service.DowntimeTreatment.DowntimeTreatment.GetDowntimeReasonInfo();
-            string m_DowntimeTreatmentJson = EasyUIJsonParser.TreeJsonParser.DataTableToJsonByLevelCodeWithIdColumn(m_DowntimeTreatmentInfo, "MachineHaltReasonId", "ReasonItemId", "ReasonText");
+            string m_DowntimeTreatmentJson = EasyUIJsonParser.TreeJsonParser.DataTableToJsonByLevelCode(m_DowntimeTreatmentInfo, "LevelCode", "ReasonText", "MachineHaltReasonId");
             return m_DowntimeTreatmentJson;
         }
         [WebMethod]
-        public static string GetDowntimeTreatmentInfo(string myReasonItemId)
+        public static string GetDowntimeTreatmentInfo(string myMachineHaltReasonID)
         {
-            DataTable m_DowntimeTreatmentInfo = ExperienceInformation.Service.DowntimeTreatment.DowntimeTreatment.GetDowntimeTreatmentInfo(myReasonItemId);
+            DataTable m_DowntimeTreatmentInfo = ExperienceInformation.Service.DowntimeTreatment.DowntimeTreatment.GetDowntimeTreatmentInfo(myMachineHaltReasonID);
             string m_DowntimeTreatmentJson = EasyUIJsonParser.DataGridJsonParser.DataTableToJson(m_DowntimeTreatmentInfo);
             return m_DowntimeTreatmentJson;
         }
@@ -63,11 +63,11 @@ namespace ExperienceInformation.Web.UI_DowntimeTreatment
         }
         [WebMethod]
 
-        public static string AddDowntimeTreatment(string myDowntimeTreatmentName, string myReasonItemId, string myPhenomenon, string myTreatment, string myRemarks)
+        public static string AddDowntimeTreatment(string myDowntimeTreatmentName, string myMachineHaltReasonID, string myPhenomenon, string myTreatment, string myRemarks)
         {
             if (mUserId != "")
             {
-                int m_DowntimeTreatmentText = ExperienceInformation.Service.DowntimeTreatment.DowntimeTreatment.AddDowntimeTreatment(myDowntimeTreatmentName, myReasonItemId, myPhenomenon, myTreatment, mUserId, myRemarks);
+                int m_DowntimeTreatmentText = ExperienceInformation.Service.DowntimeTreatment.DowntimeTreatment.AddDowntimeTreatment(myDowntimeTreatmentName, myMachineHaltReasonID, myPhenomenon, myTreatment, mUserId, myRemarks);
                 int m_Result = m_DowntimeTreatmentText > 0 ? 1 : m_DowntimeTreatmentText;
                 return m_Result.ToString();
             }
@@ -77,11 +77,11 @@ namespace ExperienceInformation.Web.UI_DowntimeTreatment
             }
         }
         [WebMethod]
-        public static string ModifyDowntimeTreatment(string myDowntimeTreatmentItemId, string myDowntimeTreatmentName, string myReasonItemId, string myPhenomenon, string myTreatment, string myRemarks)
+        public static string ModifyDowntimeTreatment(string myDowntimeTreatmentItemId, string myDowntimeTreatmentName, string myMachineHaltReasonID, string myPhenomenon, string myTreatment, string myRemarks)
         {
             if (mUserId != "")
             {
-                int m_DowntimeTreatmentText = ExperienceInformation.Service.DowntimeTreatment.DowntimeTreatment.ModifyDowntimeTreatmentById(myDowntimeTreatmentItemId, myDowntimeTreatmentName, myReasonItemId, myPhenomenon, myTreatment, mUserId, myRemarks);
+                int m_DowntimeTreatmentText = ExperienceInformation.Service.DowntimeTreatment.DowntimeTreatment.ModifyDowntimeTreatmentById(myDowntimeTreatmentItemId, myDowntimeTreatmentName, myMachineHaltReasonID, myPhenomenon, myTreatment, mUserId, myRemarks);
                 int m_Result = m_DowntimeTreatmentText > 0 ? 1 : m_DowntimeTreatmentText;
                 return m_Result.ToString();
             }

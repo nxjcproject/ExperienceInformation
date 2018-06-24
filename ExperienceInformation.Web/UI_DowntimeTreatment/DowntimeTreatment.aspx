@@ -5,12 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>停机故障处理</title>
+    <title>停机处理方案</title>
     <link rel="stylesheet" type="text/css" href="/lib/ealib/themes/gray/easyui.css" />
     <link rel="stylesheet" type="text/css" href="/lib/ealib/themes/icon.css" />
     <link rel="stylesheet" type="text/css" href="/lib/extlib/themes/syExtIcon.css" />
     <link rel="stylesheet" type="text/css" href="/lib/extlib/themes/syExtCss.css" />
-
+    
     <script type="text/javascript" src="/lib/ealib/jquery.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="/lib/ealib/jquery.easyui.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="/lib/ealib/easyui-lang-zh_CN.js" charset="utf-8"></script>
@@ -30,12 +30,12 @@
                     <td>
                         <table>
                             <tr>
-                                <td style="width: 80px; text-align:right;">选择原因</td>
+                                <td style="width: 50px; text-align:right;">选择原因</td>
                                 <td style="width: 260px;">
                                      <input id="Combobox_DowntimeReasonF" class="easyui-combotree" style="width: 240px;" />
                                 </td>
                                 <td>
-                                    <a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search',plain:true"
+                                    <a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'"
                                         onclick="QueryDowntimeTreatmentFun();">查询</a>
                                 </td>
                             </tr>

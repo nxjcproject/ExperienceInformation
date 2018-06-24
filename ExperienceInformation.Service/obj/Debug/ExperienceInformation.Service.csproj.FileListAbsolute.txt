@@ -40,3 +40,14 @@ C:\Users\Administrator\Desktop\NXJC统一调整列宽\ExperienceInformation-mast
 C:\Users\Administrator\Desktop\NXJC统一调整列宽\ExperienceInformation-master\ExperienceInformation.Service\obj\Debug\ExperienceInformation.Service.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\NXJC统一调整列宽\ExperienceInformation-master\ExperienceInformation.Service\obj\Debug\ExperienceInformation.Service.dll
 C:\Users\Administrator\Desktop\NXJC统一调整列宽\ExperienceInformation-master\ExperienceInformation.Service\obj\Debug\ExperienceInformation.Service.pdb
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Service\bin\Debug\ExperienceInformation.Service.dll
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Service\bin\Debug\ExperienceInformation.Service.pdb
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Service\bin\Debug\ExperienceInformation.Infrastructure.dll
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Service\bin\Debug\AutoMapper.dll
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Service\bin\Debug\ExperienceInformation.Infrastructure.pdb
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Service\bin\Debug\EasyUIJsonParser.pdb
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Service\bin\Debug\SqlServerDataAdapter.pdb
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Service\obj\Debug\ExperienceInformation.Service.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Service\obj\Debug\ExperienceInformation.Service.dll
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Service\obj\Debug\ExperienceInformation.Service.pdb
+C:\Users\Administrator\Desktop\ExperienceInformation\ExperienceInformation.Service\bin\Debug\SqlServerDataAdapter.dll

@@ -34,21 +34,22 @@
                     <td>
                         <table>
                             <tr>
-                                <td style="width: 80px; text-align: right;">选择时间</td>
-                                <td style="width: 260px;">
-                                    <input id="Datebox_StartTimeF" class="easyui-datebox" data-options="validType:'md[\'2012-10\']', required:true" style="width: 120px" />--
-                                    <input id="Datebox_EndTimeF" class="easyui-datebox" data-options="validType:'md[\'2012-10\']', required:true" style="width: 120px" />
+                                <td style="width: 155px; text-align: right;">开始时间
+                                    <input id="Datebox_StartTimeF" class="easyui-datebox" data-options="validType:'md[\'2012-10\']', required:true" style="width: 100px" />
                                 </td>
-                                <td style="width: 40px; text-align: right;">名称</td>
-                                <td style="width: 150px;">
+                                <td style="width: 155px; text-align: right;">结束时间
+                                    <input id="Datebox_EndTimeF" class="easyui-datebox" data-options="validType:'md[\'2012-10\']', required:true" style="width: 100px" />
+                                </td>
+                                <td style="width: 30px; text-align: right;">名称</td>
+                                <td>
                                     <input id="TextBox_RecordNameF" class="easyui-textbox" style="width: 140px;" />
                                 </td>
-                                <td style="width: 40px; text-align: right;">部门</td>
-                                <td style="width: 140px;">
+                                <td style="width: 30px; text-align: right;">部门</td>
+                                <td>
                                     <input id="TextBox_DepartmentNameF" class="easyui-textbox" style="width: 130px;" />
                                 </td>
                                 <td>
-                                    <a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search',plain:true"
+                                    <a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'"
                                         onclick="QueryEnergyProcessRecordFun();">查询</a>
                                 </td>
                             </tr>

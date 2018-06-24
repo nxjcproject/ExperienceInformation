@@ -1,7 +1,7 @@
 ﻿var AddDowntimeTreatmentFlag;               //标记当前操作是添加还是删除.1表示添加;2表示修改
 var DowntimeTreatmentItemId;
-var DowntimeReasonIdF;
-var DowntimeReasonId;
+//var DowntimeReasonIdF;
+//var DowntimeReasonId;
 $(document).ready(function () {
     InitializingDefaultData()
     InitializingDialog();
@@ -26,33 +26,54 @@ function InitializeDowntimeReasonComboxTree(myData) {
     $('#Combobox_DowntimeReasonF').combotree({
         data: myData,
         dataType: "json",
-        valueField: 'id',
+        valueField: 'MachineHaltReasonID',
         textField: 'text',
         required: false,
         panelHeight: 'auto',
         editable: false,
-        onSelect: function (myRecord) {
-            DowntimeReasonIdF = myRecord.ReasonItemId;
+        onLoadSuccess: function (row, data) {
+            $(this).tree("collapseAll");
+        },
+        onSelect: function (node) {
+        var tree = $(this).tree;
+            //选中的节点是否为叶子节点,如果不是叶子节点,清除选中  
+        var isLeaf = tree('isLeaf', node.target);
+        if (!isLeaf) {
+            alert("请选择具体停机原因!");
+            //清除选中  
+            $('#Combobox_DowntimeReasonF').combotree('clear');
         }
+    }
+
     });
     $('#Combobox_DowntimeReason').combotree({
         data: myData,
         dataType: "json",
-        valueField: 'id',
+        valueField: 'MachineHaltReasonID',
         textField: 'text',
         required: false,
         panelHeight: 'auto',
         editable: false,
-        onSelect: function (myRecord) {
-            DowntimeReasonId = myRecord.ReasonItemId;
+        onLoadSuccess: function (row, data) {
+            $('#Combobox_DowntimeReason').combotree('tree').tree("collapseAll");
+        },
+        onSelect: function (node) {
+            var tree = $(this).tree;
+            //选中的节点是否为叶子节点,如果不是叶子节点,清除选中  
+            var isLeaf = tree('isLeaf', node.target);
+            if (!isLeaf) {
+                alert("请选择具体停机原因!");
+                //清除选中  
+                $('#Combobox_DowntimeReason').combotree('clear');
+            }
         }
     });
 }
 
 //////////////////////列出所有岗位操作指导列表/////////////////////
 function LoadDowntimeTreatmentData(myLoadType) {
-    var m_ReasonItemId = $('#Combobox_DowntimeReasonF').combotree('getValue');
-    if (m_ReasonItemId != "" && m_ReasonItemId != undefined) {
+    var m_MachineHaltReasonID = $('#Combobox_DowntimeReasonF').combotree('getValue');
+    if (m_MachineHaltReasonID != "" && m_MachineHaltReasonID != undefined) {
         var win = $.messager.progress({
             title: '请稍后',
             msg: '数据载入中...'
@@ -60,7 +81,7 @@ function LoadDowntimeTreatmentData(myLoadType) {
         $.ajax({
             type: "POST",
             url: "DowntimeTreatment.aspx/GetDowntimeTreatmentInfo",
-            data: "{myReasonItemId:'" + m_ReasonItemId + "'}",
+            data: "{myMachineHaltReasonID:'" + m_MachineHaltReasonID + "'}",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (msg) {
@@ -94,19 +115,19 @@ function InitializeDowntimeTreatmentGrid(myGridId, myData) {
         singleSelect: true,
         idField: 'DowntimeTreatmentItemId',
         columns: [[{
-            width: 200,
+            width: 180,
             title: '名称',
             field: 'DowntimeTreatmentName'
         }, {
-            width: 300,
+            width: 250,
             title: '停机原因',
             field: 'ReasonText'
         }, {
-            width: 120,
+            width: 100,
             title: '创建人',
-            field: 'CreateName'
+            field: 'Creator'
         }, {
-            width: 120,
+            width: 130,
             title: '创建时间',
             field: 'CreateTime'
         }
@@ -115,7 +136,7 @@ function InitializeDowntimeTreatmentGrid(myGridId, myData) {
             title: '备注',
             field: 'Remarks'
         }, {
-            width: 70,
+            width: 80,
             title: '操作',
             field: 'Op',
             formatter: function (value, row, index) {
@@ -194,7 +215,6 @@ function AddDowntimeTreatmentFun() {
     $('#dlg_AddDowntimeTreatment').dialog('open');
 }
 function ModifyDowntimeTreatmentFun(myDowntimeTreatmentItemId) {
-
     $.ajax({
         type: "POST",
         url: "DowntimeTreatment.aspx/GetDowntimeTreatmentInfoById",
@@ -203,17 +223,15 @@ function ModifyDowntimeTreatmentFun(myDowntimeTreatmentItemId) {
         dataType: "json",
         success: function (msg) {
             var m_MsgData = jQuery.parseJSON(msg.d);
-            if (m_MsgData['rows'] && m_MsgData['rows'].length > 0) {
+            if (m_MsgData['rows'].length > 0) {
                 var m_Row = m_MsgData['rows'][0];
-                DowntimeTreatmentItemId = myDowntimeTreatmentItemId;
-
                 $('#Textbox_DowntimeTreatmentName').textbox('setText', m_Row.DowntimeTreatmentName);
                 UE.getEditor('editor_Description').setContent('', false);
                 UE.getEditor('editor').setContent('', false);
-                $('#Combobox_DowntimeReason').combotree('setValue', m_Row.ReasonItemId);
+                $('#Combobox_DowntimeReason').combotree('setValue', m_Row.MachineHaltReasonID);
                 $('#Textbox_Remarks').textbox('setText', m_Row.Remarks);
                 AddDowntimeTreatmentFlag = 2;           //1表示添加;2表示修改
-
+                DowntimeTreatmentItemId = myDowntimeTreatmentItemId;
                 $('#dlg_AddDowntimeTreatment').dialog('open');
             }
         }
@@ -279,16 +297,16 @@ function DeleteDowntimeTreatmentFun(myDowntimeTreatmentItemId) {
 //////////////////////////保存编辑值////////////////////////////
 function SaveDowntimeTreatmentFun() {
     var m_DowntimeTreatmentName = $('#Textbox_DowntimeTreatmentName').textbox('getText');
-    var m_ReasonItemId = $('#Combobox_DowntimeReason').combotree('getValue');
+    var m_MachineHaltReasonID = $('#Combobox_DowntimeReason').combotree('getValue');
     var m_DescriptionText = UE.getEditor('editor_Description').getContent();
     var m_TreatmentText = UE.getEditor('editor').getContent();
     var m_Remarks = $('#Textbox_Remarks').textbox('getText');
-    $('#Combobox_DowntimeReasonF').combotree('setValue', m_ReasonItemId);
+    $('#Combobox_DowntimeReasonF').combotree('setValue', m_MachineHaltReasonID);
     if (AddDowntimeTreatmentFlag == 1) {
         $.ajax({
             type: "POST",
             url: "DowntimeTreatment.aspx/AddDowntimeTreatment",
-            data: "{myDowntimeTreatmentName:'" + m_DowntimeTreatmentName + "',myReasonItemId:'" + m_ReasonItemId + "',myPhenomenon:'" + m_DescriptionText
+            data: "{myDowntimeTreatmentName:'" + m_DowntimeTreatmentName + "',myMachineHaltReasonID:'" + m_MachineHaltReasonID + "',myPhenomenon:'" + m_DescriptionText
                 + "',myTreatment:'" + m_TreatmentText + "',myRemarks:'" + m_Remarks + "'}",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -316,7 +334,7 @@ function SaveDowntimeTreatmentFun() {
         $.ajax({
             type: "POST",
             url: "DowntimeTreatment.aspx/ModifyDowntimeTreatment",
-            data: "{myDowntimeTreatmentItemId:'" + DowntimeTreatmentItemId + "',myDowntimeTreatmentName:'" + m_DowntimeTreatmentName + "',myReasonItemId:'" + m_ReasonItemId
+            data: "{myDowntimeTreatmentItemId:'" + DowntimeTreatmentItemId + "',myDowntimeTreatmentName:'" + m_DowntimeTreatmentName + "',myMachineHaltReasonID:'" + m_MachineHaltReasonID
                  + "',myPhenomenon:'" + m_DescriptionText + "',myTreatment:'" + m_TreatmentText + "',myRemarks:'" + m_Remarks + "'}",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -328,7 +346,7 @@ function SaveDowntimeTreatmentFun() {
                     QueryDowntimeTreatmentFun();
                 }
                 else if (m_ModifyResult == 0) {
-                    alert("该停机处理已存在!");
+                    alert("修改失败!");
                 }
                 else if (m_ModifyResult == -1) {
                     alert("数据库连接错误!");
